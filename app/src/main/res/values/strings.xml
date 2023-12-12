@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Zakat Calculator</string>
+
+    <string-array name="type_options">
+        <item>Keep</item>
+        <item>Wear</item>
+    </string-array>
+</resources>
