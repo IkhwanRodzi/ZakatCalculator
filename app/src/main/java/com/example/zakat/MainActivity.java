@@ -1,6 +1,7 @@
 package com.example.zakat;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -70,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         if (item.getItemId() == R.id.item_share) {
             Intent shareIntent = new Intent(Intent.ACTION_SEND);
             shareIntent.setType("text/plain");
-            shareIntent.putExtra(Intent.EXTRA_TEXT, "Please use my application - https://t.co/app");
+            shareIntent.putExtra(Intent.EXTRA_TEXT, "Please use my application -https://github.com/IkhwanRodzi/ZakatCalculator/tree/master");
             startActivity(Intent.createChooser(shareIntent, null));
             return true;
         } else if (item.getItemId() == R.id.item_about) {
@@ -108,5 +109,11 @@ public class MainActivity extends AppCompatActivity {
         // Display the calculated values in TextViews
         textViewMustPayZakat.setText(String.format("Total Must-Pay Zakat: RM %.2f", totalMustPayZakat));
         textViewGoldValueZakatPayable.setText(String.format("Total Gold Value Zakat Payable: RM %.2f", totalGoldValueZakatPayable));
+    }
+
+    public void openGitHubLink(View view) {
+        Uri uri = Uri.parse("https://github.com/IkhwanRodzi/ZakatCalculator/tree/master");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
     }
 }

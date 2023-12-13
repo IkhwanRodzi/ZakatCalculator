@@ -119,15 +119,33 @@
 
     <TextView
         android:id="@+id/GitHubLink"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="GitHub:"
+        android:layout_marginTop="68dp"
+        android:clickable="true"
+        android:onClick="openGitHubLink"
+        android:text="GitHub: https://github.com/IkhwanRodzi/ZakatCalculator/tree/master"
+        android:textAlignment="center"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name2"
+        app:layout_constraintVertical_bias="0.204" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Please Click The link to visit github"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/about_toolbar"
-        app:layout_constraintVertical_bias="0.462" />
+        app:layout_constraintVertical_bias="0.459" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
